@@ -21,7 +21,7 @@ for file in "$INPUT_DIR"/*.{wav,mp3,m4a,flac,ogg}; do
     echo "Processing: $filename"
 
     # Run Whisper (SRT output)
-    whisper "$file" --language en --output_format srt --output_dir "$OUTPUT_DIR"
+    whisper "$file" --output_format srt --output_dir "$OUTPUT_DIR"
 
     # Convert SRT to Audacity label format
     awk '
